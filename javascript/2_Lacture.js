@@ -195,7 +195,7 @@ const adding = (num1, num2) => {
 
 /*
 
-//Difference between normal function and arrow function
+//*Difference between normal function and arrow function
 //1. Syntax is different
 function add(num){
     return num + num;
