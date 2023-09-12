@@ -106,6 +106,6 @@ test();
 //Hoisting is the default behavior of moving all the declarations
 //at the top of the scope before code execution.
 
-//!Note: JavaScript only hoists declarations, not initializations.
+//!Note: JavaScript only hoists declarations, not initializations
 
 
