@@ -213,3 +213,120 @@ const {fullName: {first}} = userlist
 
 console.log(myName)
 console.log(first)
+
+//* 10 - what's the Output
+// While passing as an function parameter, rest operator should always be the last parameter
+function getItems(fruitList, favoriteFruit, ...args){
+  // But spread operators can be used in between
+  return [...fruitList, ...args, favoriteFruit];
+}
+
+const list = getItems(["banana", "apple"], "peer", "orange");
+
+console.log(list);
+
+//* 11 - what's the Output
+// Object Referencing
+// When we write d = c1, we are not copying the values, we are just passing the reference of that object to d
+// Any changes made will be reflected there also
+
+let c1 = { geeting: "Hey!"};
+let d;
+
+d = c1;
+c1.geeting = "Hello";
+console.log(d.geeting) //Hello
+
+//* 12: What is the output
+// Both {a:1} are different object and are pointing to different block in the memory
+// Objects are only equal if they refer to particular part in the memory
+// console.log({ a: 1 } == { a: 1 }); // false
+// console.log({ a: 1 } === { a: 1 }); // false
+
+
+//* 13: What is the output
+// we are passing members[0] = person
+// we are then making whole object as NULL
+// if we make person.name = null
+// then our output will return us name = NULL
+let person = { name: "Narender" };
+const members = [person];
+person = null;
+console.log(members); // Array [ {…} ] 0: Object { name: "Lokesh" }
+
+//* 14: What is the output
+const value = { number: 10 };
+
+const multiply = (x = { ...value }) => {
+  console.log((x.number *= 2));
+};
+
+// here we do not pass any value so by-default.
+// rest operator takes 10 as x in function and give us 20
+// rest operator do not take it as reference so value inside object will be 10 only
+multiply(); // 20
+// Same as above
+// rest operator do not take it as reference so value inside object will be 10 only
+multiply(); // 20
+// Now we pass value to the function explicitly, so now it is passed as a reference
+// so not value of number updated to 20 so next time
+multiply(value); // 20
+// next time, again value passed as reference and value become 20*2 = 40 and number is 40 now
+multiply(value); // 40
+
+console.log(value.number); // 40
+
+// 15: What is the output
+function changeAgeAndReference(person) {
+  // we are passing personObj1 as reference so age will change to 25
+  person.age = 25;
+  // we are re-assining object which does not happen by reference so no change in personObj1 due to below code but personObj2 will get changed to below object due to below code
+  person = {
+    name: "John",
+    age: 50,
+  };
+
+  return person;
+}
+
+const personObj1 = {
+  name: "Alex",
+  age: 30,
+};
+
+const personObj2 = changeAgeAndReference(personObj1);
+
+console.log(personObj1); // Object { name: "Alex", age: 25 }
+console.log(personObj2); // Object { name: "John", age: 50 }
+
+//* 16: Deep copy VS Shallow copy of an object
+// Shallow copying creates a new object with references to the same memory locations as the original object, while deep copying  creates a new object with new memory locations for all of its properties and nested objects or arrays also known as cloning an object.
+
+let obj10 = {
+  name: "Hardik Gandya",
+  age: 25,
+};
+
+//* 3 most popular ways to clone an object
+// .assign(target,object to be copied)
+// where target is an empty object for us as we want fresh object
+const objClone = Object.assign({}, obj10);
+
+console.log(obj10); // Object { name: "Hardik Gandya", age: 25 }
+console.log(objClone); // Object { name: "Hardik Gandya", age: 25 }
+
+objClone.name = "Jasprit Gumrah";
+// This will not affect the original object as its a deep copy
+
+console.log(obj10); // Object { name: "Hardik Gandya", age: 25 }
+console.log(objClone); // Object { name: "Jasprit Gumrah", age: 25 }
+
+// Method 2
+const objClone2 = JSON.parse(JSON.stringify(obj10));
+
+console.log(objClone2); // Object { name: "Hardik Gandya", age: 25 }
+
+// Method 3
+const objClone3 = { ...obj10 };
+
+console.log(objClone3); // Object { name: "Hardik Gandya", age: 25 }
