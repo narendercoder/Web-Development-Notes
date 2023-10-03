@@ -1,0 +1,36 @@
+Technologies You Should Learn in Web Development
+
+Step 1: MERN Tech Stacks
+
+HTML
+CSS
+Javascript
+React Js
+
+Backend
+Nodejs and Express
+Database- SQL/NO SQL
+
+--------------------------
+Step 2: TypeScript
+
+Step 3: Advance Topics
+AWS/OPEN API/gRPC/tRPC/Dockerisation/ORM's,graphQL
+
+Step 4: vercel Stack
+
+Step 5: 
+create a lot of projects
+Open Source Contribution
+
+------------------
+Devops
+
+Docker/containerization
+IAC
+kubernetes
+Helm
+
+
+
+
