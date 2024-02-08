@@ -12,7 +12,6 @@
 // console.log(store(6))
 
 // var sum = function(a,b,c){
- 
 //     return{
 //         getSumTwo:function(b){
 //             return a+b;
