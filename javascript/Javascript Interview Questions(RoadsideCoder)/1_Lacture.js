@@ -71,7 +71,6 @@ test();
 // function func() {
 //     var a = 'Geeks';
 //     let b = 'Geeks';
-
 //     if (true) {
 //         let a = 'GeeksforGeeks'; // Legal Shadowing
 //         var b = 'Geeks'; // Illegal Shadowing
