@@ -40,7 +40,6 @@ console.log(sayHi.bind(person, 24)); // BoundFunctionObject { … }
 
 // 2
 const age = 10;
-
 var person1 = {
   name: "Narender",
   age: 51,
