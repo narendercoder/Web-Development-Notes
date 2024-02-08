@@ -36,7 +36,6 @@ console.log("Async statement end");
 
 /*
 -> Output of below code:
-
 Starting
 undefined
 End
