@@ -61,7 +61,6 @@ const multiplyThree = nums.myMap((num, i, nums ) =>{
 console.log(multiplyThree);
 
 //Polyfill for filter
-
 Array.prototype.myFilter= function (cb){
     let temp = [];
     for(let i = 0; i < this.length; i++){
