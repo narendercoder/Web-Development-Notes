@@ -157,7 +157,6 @@ fn(3,4,5,6);
 
 
 */
-
 // Below code works fine
 // const fn = (a, x, y, ...n) => {
 //     console.log(x, y); // 4 5
