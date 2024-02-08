@@ -50,7 +50,6 @@ const user = {
   
   console.log(obj1); //  { firstname: "Virat" }
   
-  
   //* Traversing the object
   const obj2 = {
       name: "MS",
