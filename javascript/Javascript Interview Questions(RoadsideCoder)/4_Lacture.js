@@ -1,5 +1,4 @@
 //currying
-
 //Currying is a function that takes one argument at a time and returns a new function expecting the next argument. 
 //transforms a function with multiple arguments into a nested series of functions, each taking a single argument.
 //It is a conversion of functions from callable as f(a,b,c)into callable as f(a)(b)(c).
